@@ -1,10 +1,13 @@
 * {
   box-sizing: border-box;
 }
-body {
+
+html .whole-page {
   background-image: url("/phone-shop/asset/img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wrap-home {
@@ -12,50 +15,174 @@ body {
   justify-content: center;
   margin: 100px auto;
   gap: 20%;
-}
-.admin img,
-.user img {
-  width: 300px;
-  height: 300px;
-  border: solid 4px rgba(0, 0, 0, 0.224);
-  background-color: white;
-  border-radius: 32%;
-}
-.admin,
-.user {
-  text-align: center;
-}
-.admin img:hover,
-.user img:hover {
-  border: solid 4px rgb(255, 126, 126);
+
+  .admin,
+  .user {
+    text-align: center;
+
+    img {
+      width: 300px;
+      height: 300px;
+      border: solid 4px rgba(0, 0, 0, 0.224);
+      background-color: white;
+      border-radius: 32%;
+
+      &:hover {
+        border: solid 4px rgb(255, 126, 126);
+      }
+    }
+
+    h1 {
+      color: white;
+      position: relative;
+      padding-bottom: 10px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 22%;
+        bottom: 0;
+        width: 0;
+        height: 4px;
+        background-color: transparent;
+        margin-top: 30px;
+        transition: all 0.4s;
+      }
+    }
+
+    &:hover {
+      h1 {
+        color: rgb(255, 255, 63);
+
+        &::after {
+          width: 57%;
+          background-color: rgb(255, 255, 63);
+        }
+      }
+    }
+  }
 }
 
-.admin h1,
-.user h1 {
-  color: white;
-  position: relative;
-  padding-bottom: 10px;
+html {
+  // box-sizing: border-box;
+
+  .whole-user {
+    margin: 0;
+    background-image: url("/phone-shop/asset/img/imgUser/bg-admin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    #header {
+      position: fixed;
+      width: 100%;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        .right-header {
+          font-size: 25px;
+          color: white;
+          margin-top: 20px;
+          margin-right: 50px;
+        }
+        .left-header {
+          display: flex;
+          color: white;
+
+          height: 80px;
+          font-size: 25px;
+
+          .logo {
+            margin-top: 20px;
+            margin-left: 50px;
+          }
+          .home {
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .portal-admin {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 50px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
 
-.admin h1::after,
-.user h1::after {
-  position: absolute;
-  content: "";
-  left: 22%;
-  bottom: 0;
-  width: 0;
-  height: 4px;
-  background-color: transparent;
-  margin-top: 30px;
-  transition: all 0.4s;
-}
+.banner {
+  .container {
+    display: flex;
+    color: white;
+    .banner-left {
+      width: 50%;
+      margin: 10% 2% 10% 10%;
+      img {
+        width: 100%;
+      }
+    }
 
-.admin:hover h1::after,
-.user:hover h1::after {
-  width: 57%;
-  background-color: rgb(255, 255, 63);
-}
-.admin:hover h1,
-.user:hover h1 {
-  color: rgb(255, 255, 63);
+    .banner-right {
+      width: 50%;
+      margin: 10%;
+      > * {
+        margin-bottom: 30px;
+      }
+
+      h1 {
+        font-size: 45px;
+        &:hover {
+          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
+            0 0 80px #0ff;
+          cursor: pointer;
+        }
+      }
+      .star {
+        &:hover {
+          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
+            0 0 80px #0ff;
+          cursor: pointer;
+        }
+        .toggle-color {
+          opacity: 0.5;
+        }
+      }
+
+      p:first-of-type {
+        font-size: 24px;
+        &:hover {
+          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
+            0 0 80px #0ff;
+          cursor: pointer;
+        }
+      }
+      p:last-of-type {
+        font-size: 30px;
+        font-weight: 900;
+
+        &:hover {
+          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
+            0 0 80px #0ff;
+          cursor: pointer;
+        }
+      }
+      button {
+        height: 50px;
+        font-size: 20px;
+        width: 150px;
+        border-radius: 10px;
+        border: none;
+        &:hover {
+          color: white;
+          background-color: black;
+        }
+      }
+    }
+  }
 }

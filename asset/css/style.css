@@ -2,10 +2,12 @@
   box-sizing: border-box;
 }
 
-body {
+html .whole-page {
   background-image: url("/phone-shop/asset/img/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .wrap-home {
@@ -14,35 +16,30 @@ body {
   margin: 100px auto;
   gap: 20%;
 }
-
-.admin img,
-.user img {
+.wrap-home .admin,
+.wrap-home .user {
+  text-align: center;
+}
+.wrap-home .admin img,
+.wrap-home .user img {
   width: 300px;
   height: 300px;
   border: solid 4px rgba(0, 0, 0, 0.224);
   background-color: white;
   border-radius: 32%;
 }
-
-.admin,
-.user {
-  text-align: center;
-}
-
-.admin img:hover,
-.user img:hover {
+.wrap-home .admin img:hover,
+.wrap-home .user img:hover {
   border: solid 4px rgb(255, 126, 126);
 }
-
-.admin h1,
-.user h1 {
+.wrap-home .admin h1,
+.wrap-home .user h1 {
   color: white;
   position: relative;
   padding-bottom: 10px;
 }
-
-.admin h1::after,
-.user h1::after {
+.wrap-home .admin h1::after,
+.wrap-home .user h1::after {
   position: absolute;
   content: "";
   left: 22%;
@@ -53,14 +50,116 @@ body {
   margin-top: 30px;
   transition: all 0.4s;
 }
-
-.admin:hover h1::after,
-.user:hover h1::after {
+.wrap-home .admin:hover h1,
+.wrap-home .user:hover h1 {
+  color: rgb(255, 255, 63);
+}
+.wrap-home .admin:hover h1::after,
+.wrap-home .user:hover h1::after {
   width: 57%;
   background-color: rgb(255, 255, 63);
 }
 
-.admin:hover h1,
-.user:hover h1 {
-  color: rgb(255, 255, 63);
+html .whole-user {
+  margin: 0;
+  background-image: url("/phone-shop/asset/img/imgUser/bg-admin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+html .whole-user #header {
+  position: fixed;
+  width: 100%;
+}
+html .whole-user #header .container {
+  display: flex;
+  justify-content: space-between;
+}
+html .whole-user #header .container .right-header {
+  font-size: 25px;
+  color: white;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+html .whole-user #header .container .left-header {
+  display: flex;
+  color: white;
+  height: 80px;
+  font-size: 25px;
+}
+html .whole-user #header .container .left-header .logo {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+html .whole-user #header .container .left-header .home {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+html .whole-user #header .container .left-header .portal-admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+  text-align: center;
+}
+
+.banner .container {
+  display: flex;
+  color: white;
+}
+.banner .container .banner-left {
+  width: 50%;
+  margin: 10% 2% 10% 10%;
+}
+.banner .container .banner-left img {
+  width: 100%;
+}
+.banner .container .banner-right {
+  width: 50%;
+  margin: 10%;
+}
+.banner .container .banner-right > * {
+  margin-bottom: 30px;
+}
+.banner .container .banner-right h1 {
+  font-size: 45px;
+}
+.banner .container .banner-right h1:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  cursor: pointer;
+}
+.banner .container .banner-right .star:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  cursor: pointer;
+}
+.banner .container .banner-right .star .toggle-color {
+  opacity: 0.5;
+}
+.banner .container .banner-right p:first-of-type {
+  font-size: 24px;
+}
+.banner .container .banner-right p:first-of-type:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  cursor: pointer;
+}
+.banner .container .banner-right p:last-of-type {
+  font-size: 30px;
+  font-weight: 900;
+}
+.banner .container .banner-right p:last-of-type:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  cursor: pointer;
+}
+.banner .container .banner-right button {
+  height: 50px;
+  font-size: 20px;
+  width: 150px;
+  border-radius: 10px;
+  border: none;
+}
+.banner .container .banner-right button:hover {
+  color: white;
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */

@@ -3,7 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cyber Phone - Admin</title>
+
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo"><i class="fa-solid fa-robot"></i> Cyber Phone</div>
+      <nav>
+        <a href="#"><i class="fa fa-home"></i> Home</a>
+        <a href="#"><i class="fa fa-store"></i> Store</a>
+        <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+      </nav>
+    </header>
+
+    <!-- Phone Management -->
+    <section class="phone-management">
+      <div class="card">
+        <div class="card-header">
+          <h2>Phone Management</h2>
+          <button class="btn"><i class="fa fa-plus"></i> Add Phone</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Photo</th>
+              <th>Description</th>
+              <th><i class="fa fa-cog"></i> Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Nội dung sẽ được thêm bằng JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Modal Form (ẩn mặc định) -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Add Product</h2>
+        <form id="productForm">
+          <input type="hidden" id="productId" />
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+
+          <label for="price">Price:</label>
+          <input type="number" id="price" required />
+
+          <label for="image">Photo URL:</label>
+          <input type="text" id="image" required />
+
+          <label for="desc">Description:</label>
+          <textarea id="desc" required></textarea>
+
+          <button type="submit" class="btn">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="tools">
+      <input
+        type="text"
+        id="searchBox"
+        placeholder="🔍 Tìm sản phẩm theo tên..."
+      />
+      <button onclick="sortProducts('asc')">Giá ↑</button>
+      <button onclick="sortProducts('desc')">Giá ↓</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p class="social">
+        Get connected with us on social networks:
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </p>
+
+      <div class="footer-content">
+        <div>
+          <h3><i class="fa-solid fa-robot"></i> CYBER PHONE</h3>
+          <p>
+            We pride ourselves on our efficiency and hard work, but most of all
+            our ability to source you the best quality and best value products
+            and devices in the market.
+          </p>
+        </div>
+        <div>
+          <h3>BRANDS</h3>
+          <p><a href="#">iPhone</a></p>
+          <p><a href="#">Sumsung</a></p>
+          <p><a href="#">Xiaomi</a></p>
+          <p><a href="#">Oppo</a></p>
+        </div>
+        <div>
+          <h3>USEFUL LINKS</h3>
+          <p><a href="#">Pricing</a></p>
+          <p><a href="#">Settings</a></p>
+          <p><a href="#">Orders</a></p>
+          <p><a href="#">Help</a></p>
+        </div>
+        <div>
+          <h3>CONTACT</h3>
+          <p><i class="fa fa-home"></i> Da Nang, Thanh Khe, VN</p>
+          <p><i class="fa fa-envelope"></i> cyberphone@mail.com</p>
+          <p><i class="fa fa-phone"></i> +01 234 567 88</p>
+          <p><i class="fa fa-print"></i> +01 234 567 89</p>
+        </div>
+      </div>
+      <p class="copyright">© 2022 Copyright: <a href="#">Cyber Phone</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="admin.js"></script>
+  </body>
 </html>

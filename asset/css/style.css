@@ -62,13 +62,11 @@ html .whole-page {
 
 html .whole-user {
   margin: 0;
-  background-image: url("/phone-shop/asset/img/imgUser/bg-admin.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 html .whole-user #header {
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 html .whole-user #header .container {
   display: flex;
@@ -79,16 +77,33 @@ html .whole-user #header .container .right-header {
   color: white;
   margin-top: 20px;
   margin-right: 50px;
+  font-weight: 900;
+  font-size: 30px;
+}
+html .whole-user #header .container .right-header:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  cursor: pointer;
+}
+html .whole-user #header .container .right-header i {
+  margin-right: 10px;
 }
 html .whole-user #header .container .left-header {
   display: flex;
   color: white;
+  font-weight: 900;
   height: 80px;
-  font-size: 25px;
+  font-size: 30px;
 }
 html .whole-user #header .container .left-header .logo {
   margin-top: 20px;
   margin-left: 50px;
+}
+html .whole-user #header .container .left-header .logo:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  cursor: pointer;
+}
+html .whole-user #header .container .left-header .logo i {
+  margin-right: 20px;
 }
 html .whole-user #header .container .left-header .home {
   margin-left: 100px;
@@ -97,6 +112,10 @@ html .whole-user #header .container .left-header .home {
   justify-content: center;
   text-align: center;
 }
+html .whole-user #header .container .left-header .home:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  cursor: pointer;
+}
 html .whole-user #header .container .left-header .portal-admin {
   display: flex;
   flex-direction: column;
@@ -104,7 +123,16 @@ html .whole-user #header .container .left-header .portal-admin {
   margin-left: 50px;
   text-align: center;
 }
+html .whole-user #header .container .left-header .portal-admin:hover {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  cursor: pointer;
+}
 
+.banner {
+  background-image: url("/phone-shop/asset/img/imgUser/bg-admin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .banner .container {
   display: flex;
   color: white;
@@ -162,4 +190,12 @@ html .whole-user #header .container .left-header .portal-admin {
 .banner .container .banner-right button:hover {
   color: white;
   background-color: black;
+}
+
+.list-phone {
+  background: linear-gradient(to left, #8942a8, #ba382f);
+}
+.list-phone .list-title {
+  margin: 50px auto;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

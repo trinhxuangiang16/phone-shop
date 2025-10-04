@@ -1,3 +1,5 @@
+@import "mixin";
+
 * {
   box-sizing: border-box;
 }
@@ -68,13 +70,11 @@ html {
 
   .whole-user {
     margin: 0;
-    background-image: url("/phone-shop/asset/img/imgUser/bg-admin.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 
     #header {
       position: fixed;
       width: 100%;
+      z-index: 100;
       .container {
         display: flex;
         justify-content: space-between;
@@ -83,17 +83,32 @@ html {
           color: white;
           margin-top: 20px;
           margin-right: 50px;
+          font-weight: 900;
+          font-size: 30px;
+          &:hover {
+            @include neon;
+          }
+          i {
+            margin-right: 10px;
+          }
         }
         .left-header {
           display: flex;
           color: white;
-
+          font-weight: 900;
           height: 80px;
-          font-size: 25px;
+          font-size: 30px;
 
           .logo {
             margin-top: 20px;
             margin-left: 50px;
+
+            &:hover {
+              @include neon;
+            }
+            i {
+              margin-right: 20px;
+            }
           }
           .home {
             margin-left: 100px;
@@ -101,6 +116,9 @@ html {
             flex-direction: column;
             justify-content: center;
             text-align: center;
+            &:hover {
+              @include neon;
+            }
           }
 
           .portal-admin {
@@ -109,6 +127,9 @@ html {
             justify-content: center;
             margin-left: 50px;
             text-align: center;
+            &:hover {
+              @include neon;
+            }
           }
         }
       }
@@ -117,6 +138,9 @@ html {
 }
 
 .banner {
+  background-image: url("/phone-shop/asset/img/imgUser/bg-admin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   .container {
     display: flex;
     color: white;
@@ -138,16 +162,12 @@ html {
       h1 {
         font-size: 45px;
         &:hover {
-          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
-            0 0 80px #0ff;
-          cursor: pointer;
+          @include neon;
         }
       }
       .star {
         &:hover {
-          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
-            0 0 80px #0ff;
-          cursor: pointer;
+          @include neon;
         }
         .toggle-color {
           opacity: 0.5;
@@ -157,9 +177,7 @@ html {
       p:first-of-type {
         font-size: 24px;
         &:hover {
-          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
-            0 0 80px #0ff;
-          cursor: pointer;
+          @include neon;
         }
       }
       p:last-of-type {
@@ -167,9 +185,7 @@ html {
         font-weight: 900;
 
         &:hover {
-          text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff,
-            0 0 80px #0ff;
-          cursor: pointer;
+          @include neon;
         }
       }
       button {
@@ -184,5 +200,13 @@ html {
         }
       }
     }
+  }
+}
+
+.list-phone {
+  background: linear-gradient(to left, #8942a8, #ba382f);
+  .list-title {
+    margin: 50px auto;
+    text-align: center;
   }
 }

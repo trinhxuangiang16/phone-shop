@@ -3,9 +3,7 @@
 }
 
 html .whole-page {
-  background-image: url("/phone-shop/asset/img/bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: radial-gradient(circle at top left, rgba(80, 0, 130, 0.5), rgba(0, 0, 0, 0.95));
   height: 100%;
   width: 100%;
 }
@@ -129,9 +127,7 @@ html .whole-user #header .container .left-header .portal-admin:hover {
 }
 
 .banner {
-  background-image: url("/phone-shop/asset/img/imgUser/bg-admin.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: radial-gradient(circle at top left, #2a003f, #000000 70%);
 }
 .banner .container {
   display: flex;

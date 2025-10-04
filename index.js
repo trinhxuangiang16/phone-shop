@@ -133,47 +133,6 @@ let renderCart = (cart) => {
   document.getElementById("tbody-cart").innerHTML = content;
 };
 
-// let updateItemQuantity = (productId, change) => {
-//   cartService.getListCart().then((res) => {
-//     let cart = res.data;
-//     let isValid = cart.find((item) => item.id === productId);
-
-//     if (isValid) {
-//       let newQuantity = isValid.quantity + change;
-
-//       if (newQuantity <= 0) {
-//         // xoá nếu hết số lượng
-//         cartService.deleteCartItem(isValid.id).then(() => {
-//           fetchCart();
-//         });
-//       } else {
-//         let newItem = {
-//           ...isValid,
-//           quantity: newQuantity,
-//           sum: isValid.price * newQuantity,
-//         };
-//         cartService.addToCart(newItem, isValid.id).then(() => {
-//           fetchCart();
-//         });
-//       }
-//     } else if (change > 0) {
-//       // nếu chưa có thì thêm mới
-//       listService.getItemById(productId).then((res) => {
-//         let product = res.data;
-//         let newItem = {
-//           name: product.name,
-//           price: product.price,
-//           img: product.img,
-//           quantity: 1,
-//           sum: product.price,
-//         };
-//         cartService.createFirstCart(newItem).then(() => {
-//           fetchCart();
-//         });
-//       });
-//     }
-//   });
-// };
 let updateItemQuantity = (productId, change) => {
   cartService.getListCart().then((res) => {
     let cart = res.data;

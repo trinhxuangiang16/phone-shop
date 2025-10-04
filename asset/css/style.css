@@ -189,6 +189,7 @@ html .whole-user #header .container .left-header .portal-admin:hover {
   color: white;
   background-color: rgb(31, 147, 255);
   font-weight: 700;
+  width: 170px;
 }
 
 .list-phone {
